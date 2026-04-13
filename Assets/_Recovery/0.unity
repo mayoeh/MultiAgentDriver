@@ -128,7 +128,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 86097578}
-  - component: {fileID: 86097579}
   m_Layer: 0
   m_Name: CarRoot
   m_TagString: Untagged
@@ -152,26 +151,6 @@ Transform:
   - {fileID: 234829208}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &86097579
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 86097577}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30412fcdace14a34a808daaad233208b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerMove
-  steerAction: {fileID: 0}
-  throttleAction: {fileID: 0}
-  brakeAction: {fileID: 0}
-  acceleration: 12
-  brakePower: 16
-  turnSpeed: 90
-  maxSpeed: 15
-  drag: 2
 --- !u!1 &204643711
 GameObject:
   m_ObjectHideFlags: 0
@@ -1210,11 +1189,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 625c14eee3ad46c99df7c7c891ef668a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineThirdPersonFollow
-  Damping: {x: 0, y: 0, z: 0}
+  Damping: {x: 0.1, y: 0.5, z: 0.3}
   ShoulderOffset: {x: 0, y: 0.5, z: 0}
-  VerticalArmLength: 1.2
+  VerticalArmLength: 1
   CameraSide: 1
-  CameraDistance: 8
+  CameraDistance: 5
   AvoidObstacles:
     Enabled: 0
     CollisionFilter:
@@ -1245,7 +1224,7 @@ MonoBehaviour:
   m_LegacyPriority: 0
   Target:
     TrackingTarget: {fileID: 86097578}
-    LookAtTarget: {fileID: 86097578}
+    LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   Lens:
     FieldOfView: 60.000004
@@ -1511,19 +1490,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3910990755373119420, guid: d838f7215302fe64da0f430bbff55d4d, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.71317697
       objectReference: {fileID: 0}
     - target: {fileID: -3910990755373119420, guid: d838f7215302fe64da0f430bbff55d4d, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -3910990755373119420, guid: d838f7215302fe64da0f430bbff55d4d, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.7009841
       objectReference: {fileID: 0}
     - target: {fileID: -3910990755373119420, guid: d838f7215302fe64da0f430bbff55d4d, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -3910990755373119420, guid: d838f7215302fe64da0f430bbff55d4d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1531,7 +1510,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3910990755373119420, guid: d838f7215302fe64da0f430bbff55d4d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -89.012
       objectReference: {fileID: 0}
     - target: {fileID: -3910990755373119420, guid: d838f7215302fe64da0f430bbff55d4d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -1634,8 +1613,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1863445579}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.99452585, z: 0, w: -0.104490824}
-  m_LocalPosition: {x: 7.0411334, y: 1.164, z: 2.8250523}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1767,8 +1746,8 @@ MonoBehaviour:
     Enabled: 0
     DefaultMode: 2
   DefaultBlend:
-    Style: 0
-    Time: 0
+    Style: 1
+    Time: 2
     CustomCurve:
       serializedVersion: 2
       m_Curve: []
@@ -2054,7 +2033,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1972624320}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 21c9f0a7e9d337f4ca7f541c96c3a90b, type: 3}
   m_Name: 
