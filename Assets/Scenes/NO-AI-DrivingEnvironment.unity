@@ -3097,6 +3097,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1750055932}
     m_Modifications:
+    - target: {fileID: -8793037913891490319, guid: 5cf9411810c013c40a16c502a8c90e03, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d042ac9920b37b94bb1812cbcbc7983a, type: 2}
+    - target: {fileID: -5214303918297411637, guid: 5cf9411810c013c40a16c502a8c90e03, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d042ac9920b37b94bb1812cbcbc7983a, type: 2}
+    - target: {fileID: -4530603160585418940, guid: 5cf9411810c013c40a16c502a8c90e03, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4530603160585418940, guid: 5cf9411810c013c40a16c502a8c90e03, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d042ac9920b37b94bb1812cbcbc7983a, type: 2}
+    - target: {fileID: -4530603160585418940, guid: 5cf9411810c013c40a16c502a8c90e03, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: -6389374195127674075, guid: 5cf9411810c013c40a16c502a8c90e03, type: 3}
     - target: {fileID: -3910990755373119420, guid: 5cf9411810c013c40a16c502a8c90e03, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.12
@@ -3137,6 +3157,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2612708456206667114, guid: 5cf9411810c013c40a16c502a8c90e03, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d042ac9920b37b94bb1812cbcbc7983a, type: 2}
+    - target: {fileID: 2104022605422991255, guid: 5cf9411810c013c40a16c502a8c90e03, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d042ac9920b37b94bb1812cbcbc7983a, type: 2}
     - target: {fileID: 8771091787928289351, guid: 5cf9411810c013c40a16c502a8c90e03, type: 3}
       propertyPath: m_Name
       value: 2020 Koenigsegg Jesko
@@ -3362,7 +3390,7 @@ Transform:
   m_GameObject: {fileID: 777000001}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.45400015, y: 1.0200001, z: -0.30099875}
+  m_LocalPosition: {x: -0.45400006, y: 1.0200001, z: -0.30099854}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6441,8 +6469,8 @@ Transform:
   m_GameObject: {fileID: 1750055930}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.58931947, z: -0, w: 0.80790013}
-  m_LocalPosition: {x: 2.682, y: -0.381, z: -6.378}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 2.682, y: -0.3, z: -6.378}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2110954453}
