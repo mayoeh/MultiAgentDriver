@@ -1,8 +1,9 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Fusion;
 
-public class PlayerMove : MonoBehaviour
+public class PlayerMove : NetworkBehaviour
 {
     [Tooltip("Optional. Leave all three empty to use the Driving action map from a PlayerInput on a child object.")]
     public InputActionReference steerAction;
