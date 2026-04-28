@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 30412fcdace14a34a808daaad233208b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - steerAction: {fileID: -2411954924552901894, guid: b64b4ce3728bf4e489af09a58b35d6e2, type: 3}
+  - throttleAction: {fileID: 7869070985518060523, guid: b64b4ce3728bf4e489af09a58b35d6e2, type: 3}
+  - brakeAction: {fileID: 9167388973906992006, guid: b64b4ce3728bf4e489af09a58b35d6e2, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
