@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using Fusion;
 
+[RequireComponent(typeof(Rigidbody))]
 public class PlayerMove : NetworkBehaviour
 {
     [Tooltip("Optional. Leave all three empty to use the Driving action map from a PlayerInput on a child object.")]
@@ -17,11 +18,26 @@ public class PlayerMove : NetworkBehaviour
     public float maxSpeed = 15f;
     public float drag = 2f;
 
-    private float currentSpeed;
+    [Networked] 
+    private float currentSpeed { get; set; }
+
+    private Rigidbody _rb;
     private InputAction _steer;
     private InputAction _gas;
     private InputAction _brake;
     private bool _ownsInputLifecycle;
+
+    public override void Spawned()
+    {
+        // init rigidbody on spawn
+        _rb = GetComponent<Rigidbody>();
+        
+        // camera follow only player
+        if (HasInputAuthority)
+        {
+            // TODO:
+        }
+    }
 
     private void Awake()
     {
@@ -29,7 +45,7 @@ public class PlayerMove : NetworkBehaviour
         bool hasAnyRef = steerAction || throttleAction || brakeAction;
         if (hasAnyRef && !hasAllRefs)
         {
-            Debug.LogError("PlayerMove: assign all three InputActionReferences (Steer, Gas, Brake) or leave all empty to use PlayerInput.", this);
+            Debug.LogError("PlayerMove: assign all three InputActionReferences or leave all empty.", this);
             enabled = false;
             return;
         }
@@ -46,31 +62,18 @@ public class PlayerMove : NetworkBehaviour
         PlayerInput playerInput = GetComponentInChildren<PlayerInput>();
         if (!playerInput)
         {
-            Debug.LogWarning(
-                "PlayerMove: no InputActionReferences and no PlayerInput under this object. Add PlayerInput + Wheel Mappings (Driving), or assign actions.",
-                this);
+            Debug.LogWarning("PlayerMove: No Input source found.", this);
             enabled = false;
             return;
         }
 
         InputActionMap map = playerInput.actions.FindActionMap("Driving", throwIfNotFound: false);
-        if (map == null)
+        if (map != null)
         {
-            Debug.LogError("PlayerMove: PlayerInput has no 'Driving' action map.", this);
-            enabled = false;
-            return;
+            _steer = map.FindAction("Steer", throwIfNotFound: false);
+            _gas = map.FindAction("Gas", throwIfNotFound: false);
+            _brake = map.FindAction("Brake", throwIfNotFound: false);
         }
-
-        _steer = map.FindAction("Steer", throwIfNotFound: false);
-        _gas = map.FindAction("Gas", throwIfNotFound: false);
-        _brake = map.FindAction("Brake", throwIfNotFound: false);
-        if (_steer == null || _gas == null || _brake == null)
-        {
-            Debug.LogError("PlayerMove: Driving map must contain Steer, Gas, and Brake actions.", this);
-            enabled = false;
-            return;
-        }
-
         _ownsInputLifecycle = false;
     }
 
@@ -94,29 +97,34 @@ public class PlayerMove : NetworkBehaviour
         }
     }
 
-    private void Update()
+    // fusion fun
+    public override void FixedUpdateNetwork()
     {
+        // input auth check, only they can move
+        if (!HasInputAuthority) return;
         if (_steer == null || _gas == null || _brake == null) return;
 
-        float steer = _steer.ReadValue<float>();
-        float gas = ReadPedal01(_gas);
-        float brake = ReadPedal01(_brake);
+        // 1. read input
+        float steerInput = _steer.ReadValue<float>();
+        float gasInput = ReadPedal01(_gas);
+        float brakeInput = ReadPedal01(_brake);
 
-        float input = gas - brake * (brakePower / 16f);
+        float combinedInput = gasInput - brakeInput * (brakePower / 16f);
 
-        currentSpeed += input * acceleration * Time.deltaTime;
-        currentSpeed = Mathf.MoveTowards(currentSpeed, 0f, drag * Time.deltaTime);
+        // 2. calc speed
+        currentSpeed += combinedInput * acceleration * Runner.DeltaTime;
+        currentSpeed = Mathf.MoveTowards(currentSpeed, 0f, drag * Runner.DeltaTime);
         currentSpeed = Mathf.Clamp(currentSpeed, -maxSpeed * 0.5f, maxSpeed);
 
-        float turn = steer * turnSpeed * Mathf.Clamp01(Mathf.Abs(currentSpeed)) * Time.deltaTime;
-        transform.Rotate(0f, turn, 0f);
-
-        transform.position += transform.forward * currentSpeed * Time.deltaTime;
+        // 3. calc rotatoin
+        float turnAmount = steerInput * turnSpeed * Mathf.Clamp01(Mathf.Abs(currentSpeed)) * Runner.DeltaTime;
+        Quaternion turnRotation = Quaternion.Euler(0f, turnAmount, 0f);
+        
+        // 4. apply to rigidbody, car
+        _rb.MoveRotation(_rb.rotation * turnRotation);
+        _rb.MovePosition(_rb.position + transform.forward * currentSpeed * Runner.DeltaTime);
     }
 
-    /// <summary>
-    /// Wheel axes use -1..1 with an inverted pedal curve. Gamepad triggers are 0..1 and handled directly.
-    /// </summary>
     private static float ReadPedal01(InputAction action)
     {
         float raw = action.ReadValue<float>();
@@ -127,9 +135,6 @@ public class PlayerMove : NetworkBehaviour
         return NormalizeWheelPedal(raw);
     }
 
-    /// <summary>
-    /// Matches the original arcade curve for Logitech-style -1..1 axes (after Invert on bindings).
-    /// </summary>
     private static float NormalizeWheelPedal(float raw)
     {
         float v = (raw + 1f) * 0.5f;

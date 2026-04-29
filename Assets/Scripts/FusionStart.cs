@@ -3,7 +3,12 @@ using UnityEngine;
 
 public class FusionStart : MonoBehaviour
 {
-    public NetworkObject localPlayerCar;
+    private static NetworkObject localPlayerCar;
+
+    void Awake()
+    {
+        localPlayerCar = GameObject.Find("CarRoot").GetComponent<NetworkObject>();
+    }
 
     async void Start()
     {
