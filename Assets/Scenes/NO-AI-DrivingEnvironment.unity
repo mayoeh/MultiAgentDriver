@@ -512,7 +512,7 @@ MonoBehaviour:
   m_StopNaN: 0
   m_Dithering: 0
   m_ClearDepth: 1
-  m_AllowXRRendering: 1
+  m_AllowXRRendering: 0
   m_AllowHDROutput: 1
   m_UseScreenCoordOverride: 0
   m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -2744,7 +2744,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2074073887}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 2.057, y: 0, z: 0}
 --- !u!1 &629718361
 GameObject:
   m_ObjectHideFlags: 0
@@ -3390,7 +3390,7 @@ Transform:
   m_GameObject: {fileID: 777000001}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.45400006, y: 1.0200001, z: -0.30099854}
+  m_LocalPosition: {x: -0.4185, y: 1.0346999, z: -0.533}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3412,7 +3412,7 @@ MonoBehaviour:
   steerAction: {fileID: -2411954924552901894, guid: b64b4ce3728bf4e489af09a58b35d6e2, type: 3}
   steeringWheel: {fileID: 1132211728}
   steeringWheelAxis: {x: 0, y: -1, z: 0}
-  steeringWheelMaxDegrees: 60
+  steeringWheelMaxDegrees: 420
   invertSteeringWheel: 0
   steeringWheelSmoothing: 12
   frontLeftWheel: {fileID: 89181819}
@@ -4240,9 +4240,9 @@ Transform:
   m_GameObject: {fileID: 1072247956}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.00000023841858, y: -0.000000018626451, z: 0.000000074505806}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: -0.00000017881393, y: -0.00000014901161, z: 0.00000011920929}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2074073887}
   m_Father: {fileID: 777000002}
@@ -4311,7 +4311,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _monoscopic: 0
   _sharpenType: 0
-  _enableDynamicResolution: 0
+  _enableDynamicResolution: 1
   minDynamicResolutionScale: 1
   maxDynamicResolutionScale: 1
   quest2MinDynamicResolutionScale: 0.7
@@ -4370,7 +4370,7 @@ MonoBehaviour:
   requestRecordAudioPermissionOnStartup: 0
   requestPassthroughCameraAccessPermissionOnStartup: 0
   _localDimming: 1
-  _trackingOriginType: 1
+  _trackingOriginType: 0
   usePositionTracking: 1
   useRotationTracking: 1
   useIPDInPositionTracking: 1
@@ -5571,7 +5571,7 @@ MonoBehaviour:
   m_StopNaN: 0
   m_Dithering: 0
   m_ClearDepth: 1
-  m_AllowXRRendering: 1
+  m_AllowXRRendering: 0
   m_AllowHDROutput: 1
   m_UseScreenCoordOverride: 0
   m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -6469,9 +6469,9 @@ Transform:
   m_GameObject: {fileID: 1750055930}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.58931947, z: -0, w: 0.80790013}
-  m_LocalPosition: {x: 2.682, y: -0.3, z: -6.378}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 2.5678, y: -0.276, z: -6.2866}
+  m_LocalScale: {x: 0.7315968, y: 0.7315968, z: 0.7315968}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2110954453}
   - {fileID: 777000002}
