@@ -1076,10 +1076,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6541127668337169591}
+  - component: {fileID: 4185258964044957389}
   - component: {fileID: 6746746015366543721}
   - component: {fileID: 4582934348647117610}
   - component: {fileID: 8067304432724578565}
-  - component: {fileID: 4185258964044957389}
   - component: {fileID: 6934459115274098364}
   m_Layer: 0
   m_Name: CarRoot
@@ -1105,6 +1105,26 @@ Transform:
   - {fileID: 9132254984310284127}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 72.217, z: 0}
+--- !u!114 &4185258964044957389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8814464370522884148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1552182283, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fusion.Runtime.dll::Fusion.NetworkObject
+  SortKey: 2934458838
+  ObjectInterest: 1
+  Flags: 262145
+  NestedObjects: []
+  NetworkedBehaviours:
+  - {fileID: 6746746015366543721}
+  - {fileID: 6934459115274098364}
+  ForceRemoteRenderTimeframe: 0
 --- !u!114 &6746746015366543721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1182,26 +1202,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &4185258964044957389
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8814464370522884148}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1552182283, guid: e725a070cec140c4caffb81624c8c787, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Fusion.Runtime.dll::Fusion.NetworkObject
-  SortKey: 2934458838
-  ObjectInterest: 1
-  Flags: 262145
-  NestedObjects: []
-  NetworkedBehaviours:
-  - {fileID: 6746746015366543721}
-  - {fileID: 6934459115274098364}
-  ForceRemoteRenderTimeframe: 0
 --- !u!114 &6934459115274098364
 MonoBehaviour:
   m_ObjectHideFlags: 0
