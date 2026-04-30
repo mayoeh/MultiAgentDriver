@@ -24,6 +24,12 @@ public class CheckerScript : MonoBehaviour
 
         if(controller)
         {
+            // Debug.Log(
+            //     $"Checker '{gameObject.name}' triggered by car '{controller.gameObject.name}' " +
+            //     $"on layer '{LayerMask.LayerToName(c.gameObject.layer)}' " +
+            //     $"at position {c.transform.position}"
+            // );
+
             for(int i = 0; i < stopScripts.Count; i++)
                 stopScripts[i].stop = true;
         }
