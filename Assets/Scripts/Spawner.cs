@@ -8,6 +8,7 @@ public class Spawner : MonoBehaviour, INetworkRunnerCallbacks
 {
     public NetworkPrefabRef playerPrefab;
     private NetworkRunner _runner;
+    public Transform spawnPointA;
     private Dictionary<PlayerRef, NetworkObject> _spawnedCharacters = new Dictionary<PlayerRef, NetworkObject>();
 
     private void OnGUI()
@@ -50,14 +51,17 @@ public class Spawner : MonoBehaviour, INetworkRunnerCallbacks
         if (runner.IsSharedModeMasterClient)
         {
             Debug.Log("Spawning car for player: " + player);
-            // spawn car offset
+
             // TODO: make a spawn point in scene, change to var
-            Vector3 spawnPos = new Vector3(8f + (player.RawEncoded * 3), 2f, -10f);
-            runner.Spawn(playerPrefab, spawnPos, Quaternion.identity, player);
+            Vector3 pos = spawnPointA != null ? spawnPointA.position : new Vector3(8, 2, -10);
+            // TODO: fix player offset, change to spawn second player at spawnPointB or just calc the offset
+            pos.x += player.RawEncoded * 3;
+            runner.Spawn(playerPrefab, pos, spawnPointA.rotation, player);
         }
     }
 
-    public void OnPlayerLeft(NetworkRunner runner, PlayerRef player) {
+    public void OnPlayerLeft(NetworkRunner runner, PlayerRef player)
+    {
         if (_spawnedCharacters.TryGetValue(player, out NetworkObject networkObject))
         {
             if (networkObject != null) runner.Despawn(networkObject);
