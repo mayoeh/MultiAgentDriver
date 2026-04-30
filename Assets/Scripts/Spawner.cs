@@ -51,7 +51,8 @@ public class Spawner : MonoBehaviour, INetworkRunnerCallbacks
         {
             Debug.Log("Spawning car for player: " + player);
             // spawn car offset
-            Vector3 spawnPos = new Vector3(player.RawEncoded * 5, 2, 0); 
+            // TODO: make a spawn point in scene, change to var
+            Vector3 spawnPos = new Vector3(8f + (player.RawEncoded * 3), 2f, -10f);
             runner.Spawn(playerPrefab, spawnPos, Quaternion.identity, player);
         }
     }

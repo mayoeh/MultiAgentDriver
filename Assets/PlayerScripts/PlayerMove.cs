@@ -103,11 +103,14 @@ public class PlayerMove : NetworkBehaviour
         // input auth check, only they can move
         if (!HasInputAuthority) return;
         if (_steer == null || _gas == null || _brake == null) return;
-
+        
         // 1. read input
         float steerInput = _steer.ReadValue<float>();
         float gasInput = ReadPedal01(_gas);
         float brakeInput = ReadPedal01(_brake);
+
+        // TODO: delete debug once speed works properly
+        Debug.Log($"Gas: {gasInput} | Speed: {currentSpeed}");
 
         float combinedInput = gasInput - brakeInput * (brakePower / 16f);
 
