@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Fusion;
 using Fusion.Sockets;
 using UnityEngine;
@@ -9,6 +10,7 @@ public class Spawner : MonoBehaviour, INetworkRunnerCallbacks
     public NetworkPrefabRef playerPrefab;
     private NetworkRunner _runner;
     public Transform spawnPointA;
+    public Transform spawnPointB;
     private Dictionary<PlayerRef, NetworkObject> _spawnedCharacters = new Dictionary<PlayerRef, NetworkObject>();
 
     private void OnGUI()
@@ -47,15 +49,27 @@ public class Spawner : MonoBehaviour, INetworkRunnerCallbacks
 
     public void OnPlayerJoined(NetworkRunner runner, PlayerRef player)
     {
-        // master client controls car spawn amount
         if (runner.IsSharedModeMasterClient)
         {
             Debug.Log("Spawning car for player: " + player);
 
-            Vector3 pos = spawnPointA != null ? spawnPointA.position : new Vector3(8, 2, -10);
-            // TODO: fix player offset, change to spawn second player at spawnPointB or just calc the offset
-            //pos.x += player.RawEncoded * 3;
-            runner.Spawn(playerPrefab, pos, spawnPointA.rotation, player);
+            // 1. set spawn a
+            Transform selectedSpawn = spawnPointA;
+
+            // if more than 1 player, spawn at b
+            if (runner.ActivePlayers.Count() > 1)
+            {
+                selectedSpawn = spawnPointB != null ? spawnPointB : spawnPointA;
+            }
+
+            Vector3 pos = selectedSpawn.position;
+            Quaternion rot = selectedSpawn.rotation;
+
+            // 2. spawn player
+            NetworkObject playerObj = runner.Spawn(playerPrefab, pos, rot, player);
+            
+            // 3. tracks obj for despawn later
+            _spawnedCharacters.Add(player, playerObj);
         }
     }
 
