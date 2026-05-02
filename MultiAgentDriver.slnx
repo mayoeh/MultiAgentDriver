@@ -92,6 +92,7 @@
   <Project Path="Meta.XR.ImmersiveDebugger.Interface.csproj" />
   <Project Path="Meta.XR.Editor.UPST.Notifications.csproj" />
   <Project Path="Unity.CollabProxy.Editor.csproj" />
+  <Project Path="ParrelSync.csproj" />
   <Project Path="Oculus.Interaction.Samples.Editor.csproj" />
   <Project Path="UnityGLTF.Helpers.csproj" />
   <Project Path="UnityGLTF.Interactivity.VisualScripting.Editor.csproj" />
