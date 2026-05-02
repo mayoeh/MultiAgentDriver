@@ -100,6 +100,8 @@ public class PlayerMove : NetworkBehaviour
     // fusion fun
     public override void FixedUpdateNetwork()
     {
+        //print("FixedUpdateNetwork: " + Runner.DeltaTime);
+
         // input auth check, only they can move
         if (!HasInputAuthority) return;
         if (_steer == null || _gas == null || _brake == null) return;
@@ -119,13 +121,14 @@ public class PlayerMove : NetworkBehaviour
         currentSpeed = Mathf.MoveTowards(currentSpeed, 0f, drag * Runner.DeltaTime);
         currentSpeed = Mathf.Clamp(currentSpeed, -maxSpeed * 0.5f, maxSpeed);
 
-        // 3. calc rotatoin
-        float turnAmount = steerInput * turnSpeed * Mathf.Clamp01(Mathf.Abs(currentSpeed)) * Runner.DeltaTime;
-        Quaternion turnRotation = Quaternion.Euler(0f, turnAmount, 0f);
-        
-        // 4. apply to rigidbody, car
-        _rb.MoveRotation(_rb.rotation * turnRotation);
-        _rb.MovePosition(_rb.position + transform.forward * currentSpeed * Runner.DeltaTime);
+        Debug.Log($"Combined Input: {combinedInput} | Current Speed: {currentSpeed}");
+
+        // 1. calculate turn
+        float turnAmount = steerInput * turnSpeed * Mathf.Clamp01(Mathf.Abs(currentSpeed));
+        _rb.angularVelocity = new Vector3(0, turnAmount, 0);
+
+        // 2. apply Velocity instead of MovePosition
+        _rb.linearVelocity = transform.forward * currentSpeed;
     }
 
     private static float ReadPedal01(InputAction action)
