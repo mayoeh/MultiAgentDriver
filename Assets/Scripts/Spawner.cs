@@ -48,19 +48,19 @@ public class Spawner : MonoBehaviour, INetworkRunnerCallbacks
     }
     
     public void OnPlayerJoined(NetworkRunner runner, PlayerRef player)
-{
-    // spawn own player (before p1 spawn for p2)
-    if (player == runner.LocalPlayer)
     {
-        Debug.Log("Spawning my own car.");
+        // spawn own player (before p1 spawn for p2)
+        if (player == runner.LocalPlayer)
+        {
+            Debug.Log("Spawning my own car.");
 
-        // use pid to spawn at a or b
-        Transform selectedSpawn = (player.PlayerId == 1) ? spawnPointA : spawnPointB;
+            // use pid to spawn at a or b
+            Transform selectedSpawn = (player.PlayerId == 1) ? spawnPointA : spawnPointB;
 
-        // assign state auth to owner of car
-        runner.Spawn(playerPrefab, selectedSpawn.position, selectedSpawn.rotation, player);
+            // assign state auth to owner of car
+            runner.Spawn(playerPrefab, selectedSpawn.position, selectedSpawn.rotation, player);
+        }
     }
-}
 
     public void OnPlayerLeft(NetworkRunner runner, PlayerRef player)
     {
