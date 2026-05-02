@@ -52,7 +52,6 @@ public class Spawner : MonoBehaviour, INetworkRunnerCallbacks
         {
             Debug.Log("Spawning car for player: " + player);
 
-            // TODO: make a spawn point in scene, change to var
             Vector3 pos = spawnPointA != null ? spawnPointA.position : new Vector3(8, 2, -10);
             // TODO: fix player offset, change to spawn second player at spawnPointB or just calc the offset
             //pos.x += player.RawEncoded * 3;
