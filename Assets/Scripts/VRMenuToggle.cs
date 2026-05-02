@@ -7,7 +7,6 @@ public class VRMenuToggle : MonoBehaviour
     public Transform playerCamera;
 
     public InputActionReference toggleMenuAction;
-
     public float distanceInFront = 2f;
 
     void OnEnable()
@@ -32,33 +31,45 @@ public class VRMenuToggle : MonoBehaviour
         ToggleMenu();
     }
 
-    void ToggleMenu()
+    public void ToggleMenu()
+    {
+        if (menuUI.activeSelf)
+        {
+            menuUI.SetActive(false);
+            return;
+        }
+
+        ShowMenu();
+    }
+
+    public void ShowMenu()
+    {
+        // Position in front of player
+        Vector3 spawnPos =
+            playerCamera.position +
+            playerCamera.forward * distanceInFront;
+
+        spawnPos.y = playerCamera.position.y;
+
+        menuUI.transform.position = spawnPos;
+
+        // FIXED: correct facing direction
+        Vector3 lookDir =
+            menuUI.transform.position - playerCamera.position;
+
+        lookDir.y = 0;
+
+        menuUI.transform.rotation =
+            Quaternion.LookRotation(lookDir);
+
+        menuUI.SetActive(true);
+    }
+
+    public void OpenMenuFromCollision()
     {
         if (!menuUI.activeSelf)
         {
-            Vector3 spawnPos =
-                playerCamera.position +
-                playerCamera.forward * distanceInFront;
-
-            // Keep menu level with player
-            spawnPos.y = playerCamera.position.y;
-
-            menuUI.transform.position = spawnPos;
-
-            // Face the player
-            Vector3 lookDirection =
-                menuUI.transform.position - playerCamera.position;
-
-            lookDirection.y = 0;
-
-            menuUI.transform.rotation =
-                Quaternion.LookRotation(lookDirection);
-
-            menuUI.SetActive(true);
-        }
-        else
-        {
-            menuUI.SetActive(false);
+            ShowMenu();
         }
     }
 }

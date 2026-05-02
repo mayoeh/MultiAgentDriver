@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6376497979571477384}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Pole_traffic_light (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23,16 +23,17 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 211032040387840485}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.00000029802322}
   m_LocalPosition: {x: -2.596, y: 0, z: 1.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6581793907148597864}
   - {fileID: 2114168163237721102}
   - {fileID: 2795424315058859258}
   - {fileID: 7414669808390056269}
   m_Father: {fileID: 462033188534436602}
-  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &297445480835705946
 GameObject:
@@ -43,7 +44,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 909938602129579434}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Pole_traffic_light (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57,9 +58,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 297445480835705946}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 1.25, y: 0, z: -2.596}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1842590257854199985}
   - {fileID: 89109109677090222}
@@ -68,7 +71,6 @@ Transform:
   - {fileID: 6577896734869085438}
   - {fileID: 2788743716747544048}
   m_Father: {fileID: 462033188534436602}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &2526891196296273213
 GameObject:
@@ -93,9 +95,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2526891196296273213}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1019768421271913900}
   - {fileID: 2672407223173879447}
@@ -110,7 +114,6 @@ Transform:
   - {fileID: 844347675795335551}
   - {fileID: 892919055975935714}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4052145041406946993
 GameObject:
@@ -121,7 +124,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2150943961925873355}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Pole_traffic_light (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135,16 +138,17 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4052145041406946993}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.00000062584877, z: -0, w: -1}
   m_LocalPosition: {x: 2.596, y: 0, z: -1.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8360254427014369893}
   - {fileID: 6807259503583185871}
   - {fileID: 2093411703633694367}
   - {fileID: 3525204240056717577}
   m_Father: {fileID: 462033188534436602}
-  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 360, z: 0}
 --- !u!1 &4661029739001946663
 GameObject:
@@ -155,7 +159,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2103702876195321808}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Pole_traffic_light (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,16 +173,17 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4661029739001946663}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071071, z: -0, w: -0.7071065}
   m_LocalPosition: {x: 1.25, y: 0, z: 2.596}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5034012706316012914}
   - {fileID: 7339332999258315807}
   - {fileID: 7696487900948414266}
   - {fileID: 2834071442884601499}
   m_Father: {fileID: 462033188534436602}
-  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
 --- !u!1 &5105884601536073458
 GameObject:
@@ -189,7 +194,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7077750064372430869}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Pole_traffic_light (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -203,16 +208,17 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5105884601536073458}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: -1.25, y: 0, z: -2.596}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3534630643206322855}
   - {fileID: 4550785928724987771}
   - {fileID: 5621418133832821532}
   - {fileID: 1724909475402184601}
   m_Father: {fileID: 462033188534436602}
-  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &7030285444711067254
 GameObject:
@@ -223,7 +229,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3260902427752143956}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Pole_traffic_light (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -237,9 +243,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7030285444711067254}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
   m_LocalPosition: {x: 2.596, y: 0, z: 1.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8533046752885030262}
   - {fileID: 8345482638491256987}
@@ -248,7 +256,6 @@ Transform:
   - {fileID: 259310012270053377}
   - {fileID: 7388242148817162736}
   m_Father: {fileID: 462033188534436602}
-  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &7678802130961795054
 GameObject:
@@ -259,7 +266,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3338646474366975274}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Pole_traffic_light (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -273,9 +280,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7678802130961795054}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.000000029802322, z: -0, w: 1}
   m_LocalPosition: {x: -2.596, y: 0, z: -1.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7551180906962884327}
   - {fileID: 225938853126327646}
@@ -284,7 +293,6 @@ Transform:
   - {fileID: 7779984977096748331}
   - {fileID: 1296914991220575219}
   m_Father: {fileID: 462033188534436602}
-  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7793199731871063134
 GameObject:
@@ -295,7 +303,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2672407223173879447}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Pole_traffic_light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -309,9 +317,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7793199731871063134}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071067, z: -0, w: 0.70710695}
   m_LocalPosition: {x: -1.25, y: 0, z: 2.596}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4904066898218328187}
   - {fileID: 888851471215224461}
@@ -320,18 +330,22 @@ Transform:
   - {fileID: 7626465688860993342}
   - {fileID: 5459494078241991399}
   m_Father: {fileID: 462033188534436602}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1001 &20209771280430237
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 6376497979571477384}
     m_Modifications:
     - target: {fileID: 403382870701093472, guid: 687bed6654853fc48b16eb6a7e6d22de, type: 3}
       propertyPath: m_Name
       value: Pole_base
+      objectReference: {fileID: 0}
+    - target: {fileID: 403382870701093472, guid: 687bed6654853fc48b16eb6a7e6d22de, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2094389400582488211, guid: 687bed6654853fc48b16eb6a7e6d22de, type: 3}
       propertyPath: m_RootOrder
@@ -378,6 +392,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 687bed6654853fc48b16eb6a7e6d22de, type: 3}
 --- !u!4 &2114168163237721102 stripped
 Transform:
@@ -389,6 +406,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 2672407223173879447}
     m_Modifications:
     - target: {fileID: 3748260470922013471, guid: a86700941998d83419a81fe06b94fc4e, type: 3}
@@ -439,7 +457,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pole_light
       objectReference: {fileID: 0}
+    - target: {fileID: 4872952173619508445, guid: a86700941998d83419a81fe06b94fc4e, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a86700941998d83419a81fe06b94fc4e, type: 3}
 --- !u!4 &4007516587597508062 stripped
 Transform:
@@ -451,11 +476,16 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 3338646474366975274}
     m_Modifications:
     - target: {fileID: 5546174547426865819, guid: 7317ac3dc606f5c419e9a81b2156c33f, type: 3}
       propertyPath: m_Name
       value: Pole_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5546174547426865819, guid: 7317ac3dc606f5c419e9a81b2156c33f, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7913498824286195854, guid: 7317ac3dc606f5c419e9a81b2156c33f, type: 3}
       propertyPath: m_RootOrder
@@ -502,6 +532,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7317ac3dc606f5c419e9a81b2156c33f, type: 3}
 --- !u!4 &7551180906962884327 stripped
 Transform:
@@ -513,8 +546,21 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 909938602129579434}
     m_Modifications:
+    - target: {fileID: 2362560372462735108, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2438915277165007733, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4076582724436831561, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 5880005924203062904, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -563,7 +609,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Traffic_light (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6674853065384745470, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6780992711894575427, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092498463705685410, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8977522139522616478, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
 --- !u!4 &6577896734869085438 stripped
 Transform:
@@ -575,11 +640,16 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 2672407223173879447}
     m_Modifications:
     - target: {fileID: 403382870701093472, guid: 687bed6654853fc48b16eb6a7e6d22de, type: 3}
       propertyPath: m_Name
       value: Pole_base
+      objectReference: {fileID: 0}
+    - target: {fileID: 403382870701093472, guid: 687bed6654853fc48b16eb6a7e6d22de, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2094389400582488211, guid: 687bed6654853fc48b16eb6a7e6d22de, type: 3}
       propertyPath: m_RootOrder
@@ -626,6 +696,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 687bed6654853fc48b16eb6a7e6d22de, type: 3}
 --- !u!4 &888851471215224461 stripped
 Transform:
@@ -637,6 +710,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 6376497979571477384}
     m_Modifications:
     - target: {fileID: 3748260470922013471, guid: a86700941998d83419a81fe06b94fc4e, type: 3}
@@ -687,7 +761,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pole_light
       objectReference: {fileID: 0}
+    - target: {fileID: 4872952173619508445, guid: a86700941998d83419a81fe06b94fc4e, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a86700941998d83419a81fe06b94fc4e, type: 3}
 --- !u!4 &2795424315058859258 stripped
 Transform:
@@ -699,6 +780,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 462033188534436602}
     m_Modifications:
     - target: {fileID: 1892083345145105366, guid: 566725c8dfb238f419a8e9342ffaab05, type: 3}
@@ -749,7 +831,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads_1_lines_walk
       objectReference: {fileID: 0}
+    - target: {fileID: 2450546581216251122, guid: 566725c8dfb238f419a8e9342ffaab05, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 566725c8dfb238f419a8e9342ffaab05, type: 3}
 --- !u!4 &1019768421271913900 stripped
 Transform:
@@ -761,6 +850,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 909938602129579434}
     m_Modifications:
     - target: {fileID: 3748260470922013471, guid: a86700941998d83419a81fe06b94fc4e, type: 3}
@@ -811,7 +901,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pole_light
       objectReference: {fileID: 0}
+    - target: {fileID: 4872952173619508445, guid: a86700941998d83419a81fe06b94fc4e, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a86700941998d83419a81fe06b94fc4e, type: 3}
 --- !u!4 &3248681208911566528 stripped
 Transform:
@@ -823,11 +920,16 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 2150943961925873355}
     m_Modifications:
     - target: {fileID: 5546174547426865819, guid: 7317ac3dc606f5c419e9a81b2156c33f, type: 3}
       propertyPath: m_Name
       value: Pole_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5546174547426865819, guid: 7317ac3dc606f5c419e9a81b2156c33f, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7913498824286195854, guid: 7317ac3dc606f5c419e9a81b2156c33f, type: 3}
       propertyPath: m_RootOrder
@@ -874,6 +976,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7317ac3dc606f5c419e9a81b2156c33f, type: 3}
 --- !u!4 &8360254427014369893 stripped
 Transform:
@@ -885,8 +990,21 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 2672407223173879447}
     m_Modifications:
+    - target: {fileID: 2362560372462735108, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2438915277165007733, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4076582724436831561, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 5880005924203062904, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -935,7 +1053,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Traffic_light (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6674853065384745470, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6780992711894575427, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092498463705685410, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8977522139522616478, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
 --- !u!4 &5459494078241991399 stripped
 Transform:
@@ -947,11 +1084,16 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 3260902427752143956}
     m_Modifications:
     - target: {fileID: 5546174547426865819, guid: 7317ac3dc606f5c419e9a81b2156c33f, type: 3}
       propertyPath: m_Name
       value: Pole_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5546174547426865819, guid: 7317ac3dc606f5c419e9a81b2156c33f, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7913498824286195854, guid: 7317ac3dc606f5c419e9a81b2156c33f, type: 3}
       propertyPath: m_RootOrder
@@ -998,6 +1140,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7317ac3dc606f5c419e9a81b2156c33f, type: 3}
 --- !u!4 &8533046752885030262 stripped
 Transform:
@@ -1009,11 +1154,16 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 909938602129579434}
     m_Modifications:
     - target: {fileID: 403382870701093472, guid: 687bed6654853fc48b16eb6a7e6d22de, type: 3}
       propertyPath: m_Name
       value: Pole_base
+      objectReference: {fileID: 0}
+    - target: {fileID: 403382870701093472, guid: 687bed6654853fc48b16eb6a7e6d22de, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2094389400582488211, guid: 687bed6654853fc48b16eb6a7e6d22de, type: 3}
       propertyPath: m_RootOrder
@@ -1060,6 +1210,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 687bed6654853fc48b16eb6a7e6d22de, type: 3}
 --- !u!4 &89109109677090222 stripped
 Transform:
@@ -1071,8 +1224,21 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 909938602129579434}
     m_Modifications:
+    - target: {fileID: 2362560372462735108, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2438915277165007733, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4076582724436831561, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 5880005924203062904, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1121,7 +1287,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Traffic_light
       objectReference: {fileID: 0}
+    - target: {fileID: 6674853065384745470, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6780992711894575427, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092498463705685410, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8977522139522616478, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
 --- !u!4 &5481299742462626774 stripped
 Transform:
@@ -1133,11 +1318,16 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 3338646474366975274}
     m_Modifications:
     - target: {fileID: 403382870701093472, guid: 687bed6654853fc48b16eb6a7e6d22de, type: 3}
       propertyPath: m_Name
       value: Pole_base
+      objectReference: {fileID: 0}
+    - target: {fileID: 403382870701093472, guid: 687bed6654853fc48b16eb6a7e6d22de, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2094389400582488211, guid: 687bed6654853fc48b16eb6a7e6d22de, type: 3}
       propertyPath: m_RootOrder
@@ -1184,6 +1374,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 687bed6654853fc48b16eb6a7e6d22de, type: 3}
 --- !u!4 &225938853126327646 stripped
 Transform:
@@ -1195,11 +1388,16 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 462033188534436602}
     m_Modifications:
     - target: {fileID: 2773251610913140596, guid: cf9f743314e83f945a022e4e1f773e3e, type: 3}
       propertyPath: m_Name
       value: Sewer_hatch
+      objectReference: {fileID: 0}
+    - target: {fileID: 2773251610913140596, guid: cf9f743314e83f945a022e4e1f773e3e, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 6181090049011305635, guid: cf9f743314e83f945a022e4e1f773e3e, type: 3}
       propertyPath: m_RootOrder
@@ -1246,6 +1444,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf9f743314e83f945a022e4e1f773e3e, type: 3}
 --- !u!4 &8392145030974107097 stripped
 Transform:
@@ -1257,11 +1458,16 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 7077750064372430869}
     m_Modifications:
     - target: {fileID: 403382870701093472, guid: 687bed6654853fc48b16eb6a7e6d22de, type: 3}
       propertyPath: m_Name
       value: Pole_base
+      objectReference: {fileID: 0}
+    - target: {fileID: 403382870701093472, guid: 687bed6654853fc48b16eb6a7e6d22de, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2094389400582488211, guid: 687bed6654853fc48b16eb6a7e6d22de, type: 3}
       propertyPath: m_RootOrder
@@ -1308,6 +1514,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 687bed6654853fc48b16eb6a7e6d22de, type: 3}
 --- !u!4 &4550785928724987771 stripped
 Transform:
@@ -1319,11 +1528,16 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 2103702876195321808}
     m_Modifications:
     - target: {fileID: 5546174547426865819, guid: 7317ac3dc606f5c419e9a81b2156c33f, type: 3}
       propertyPath: m_Name
       value: Pole_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5546174547426865819, guid: 7317ac3dc606f5c419e9a81b2156c33f, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7913498824286195854, guid: 7317ac3dc606f5c419e9a81b2156c33f, type: 3}
       propertyPath: m_RootOrder
@@ -1370,6 +1584,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7317ac3dc606f5c419e9a81b2156c33f, type: 3}
 --- !u!4 &5034012706316012914 stripped
 Transform:
@@ -1381,6 +1598,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 2150943961925873355}
     m_Modifications:
     - target: {fileID: 3748260470922013471, guid: a86700941998d83419a81fe06b94fc4e, type: 3}
@@ -1431,7 +1649,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pole_light
       objectReference: {fileID: 0}
+    - target: {fileID: 4872952173619508445, guid: a86700941998d83419a81fe06b94fc4e, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a86700941998d83419a81fe06b94fc4e, type: 3}
 --- !u!4 &2093411703633694367 stripped
 Transform:
@@ -1443,11 +1668,16 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 2672407223173879447}
     m_Modifications:
     - target: {fileID: 5546174547426865819, guid: 7317ac3dc606f5c419e9a81b2156c33f, type: 3}
       propertyPath: m_Name
       value: Pole_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5546174547426865819, guid: 7317ac3dc606f5c419e9a81b2156c33f, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7913498824286195854, guid: 7317ac3dc606f5c419e9a81b2156c33f, type: 3}
       propertyPath: m_RootOrder
@@ -1494,6 +1724,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7317ac3dc606f5c419e9a81b2156c33f, type: 3}
 --- !u!4 &4904066898218328187 stripped
 Transform:
@@ -1505,8 +1738,21 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 3260902427752143956}
     m_Modifications:
+    - target: {fileID: 2362560372462735108, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2438915277165007733, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4076582724436831561, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 5880005924203062904, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1555,7 +1801,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Traffic_light
       objectReference: {fileID: 0}
+    - target: {fileID: 6674853065384745470, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6780992711894575427, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092498463705685410, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8977522139522616478, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
 --- !u!4 &6997371101267743717 stripped
 Transform:
@@ -1567,6 +1832,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 3260902427752143956}
     m_Modifications:
     - target: {fileID: 3748260470922013471, guid: a86700941998d83419a81fe06b94fc4e, type: 3}
@@ -1617,7 +1883,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pole_light
       objectReference: {fileID: 0}
+    - target: {fileID: 4872952173619508445, guid: a86700941998d83419a81fe06b94fc4e, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a86700941998d83419a81fe06b94fc4e, type: 3}
 --- !u!4 &460576368528397384 stripped
 Transform:
@@ -1629,11 +1902,16 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 6376497979571477384}
     m_Modifications:
     - target: {fileID: 5546174547426865819, guid: 7317ac3dc606f5c419e9a81b2156c33f, type: 3}
       propertyPath: m_Name
       value: Pole_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5546174547426865819, guid: 7317ac3dc606f5c419e9a81b2156c33f, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7913498824286195854, guid: 7317ac3dc606f5c419e9a81b2156c33f, type: 3}
       propertyPath: m_RootOrder
@@ -1680,6 +1958,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7317ac3dc606f5c419e9a81b2156c33f, type: 3}
 --- !u!4 &6581793907148597864 stripped
 Transform:
@@ -1691,8 +1972,21 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 3260902427752143956}
     m_Modifications:
+    - target: {fileID: 2362560372462735108, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2438915277165007733, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4076582724436831561, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 5880005924203062904, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -1741,7 +2035,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Traffic_light (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6674853065384745470, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6780992711894575427, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092498463705685410, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8977522139522616478, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
 --- !u!4 &7388242148817162736 stripped
 Transform:
@@ -1753,8 +2066,21 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 6376497979571477384}
     m_Modifications:
+    - target: {fileID: 2362560372462735108, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2438915277165007733, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4076582724436831561, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 5880005924203062904, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1803,7 +2129,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Traffic_light (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6674853065384745470, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6780992711894575427, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092498463705685410, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8977522139522616478, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
 --- !u!4 &7414669808390056269 stripped
 Transform:
@@ -1815,8 +2160,21 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 2672407223173879447}
     m_Modifications:
+    - target: {fileID: 2362560372462735108, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2438915277165007733, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4076582724436831561, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 5880005924203062904, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -1865,7 +2223,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Traffic_light (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6674853065384745470, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6780992711894575427, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092498463705685410, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8977522139522616478, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
 --- !u!4 &7626465688860993342 stripped
 Transform:
@@ -1877,8 +2254,21 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 3338646474366975274}
     m_Modifications:
+    - target: {fileID: 2362560372462735108, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2438915277165007733, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4076582724436831561, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 5880005924203062904, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -1927,7 +2317,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Traffic_light (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6674853065384745470, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6780992711894575427, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092498463705685410, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8977522139522616478, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
 --- !u!4 &7779984977096748331 stripped
 Transform:
@@ -1939,8 +2348,21 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 3338646474366975274}
     m_Modifications:
+    - target: {fileID: 2362560372462735108, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2438915277165007733, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4076582724436831561, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 5880005924203062904, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -1989,7 +2411,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Traffic_light (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6674853065384745470, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6780992711894575427, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092498463705685410, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8977522139522616478, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
 --- !u!4 &1296914991220575219 stripped
 Transform:
@@ -2001,11 +2442,16 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 2150943961925873355}
     m_Modifications:
     - target: {fileID: 403382870701093472, guid: 687bed6654853fc48b16eb6a7e6d22de, type: 3}
       propertyPath: m_Name
       value: Pole_base
+      objectReference: {fileID: 0}
+    - target: {fileID: 403382870701093472, guid: 687bed6654853fc48b16eb6a7e6d22de, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2094389400582488211, guid: 687bed6654853fc48b16eb6a7e6d22de, type: 3}
       propertyPath: m_RootOrder
@@ -2052,6 +2498,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 687bed6654853fc48b16eb6a7e6d22de, type: 3}
 --- !u!4 &6807259503583185871 stripped
 Transform:
@@ -2063,8 +2512,21 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 7077750064372430869}
     m_Modifications:
+    - target: {fileID: 2362560372462735108, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2438915277165007733, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4076582724436831561, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 5880005924203062904, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -2113,7 +2575,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Traffic_light (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6674853065384745470, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6780992711894575427, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092498463705685410, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8977522139522616478, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
 --- !u!4 &1724909475402184601 stripped
 Transform:
@@ -2125,8 +2606,21 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 3260902427752143956}
     m_Modifications:
+    - target: {fileID: 2362560372462735108, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2438915277165007733, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4076582724436831561, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 5880005924203062904, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -2175,7 +2669,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Traffic_light (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6674853065384745470, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6780992711894575427, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092498463705685410, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8977522139522616478, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
 --- !u!4 &259310012270053377 stripped
 Transform:
@@ -2187,8 +2700,21 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 3338646474366975274}
     m_Modifications:
+    - target: {fileID: 2362560372462735108, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2438915277165007733, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4076582724436831561, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 5880005924203062904, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -2237,7 +2763,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Traffic_light
       objectReference: {fileID: 0}
+    - target: {fileID: 6674853065384745470, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6780992711894575427, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092498463705685410, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8977522139522616478, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
 --- !u!4 &410246173296634897 stripped
 Transform:
@@ -2249,11 +2794,16 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 7077750064372430869}
     m_Modifications:
     - target: {fileID: 5546174547426865819, guid: 7317ac3dc606f5c419e9a81b2156c33f, type: 3}
       propertyPath: m_Name
       value: Pole_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5546174547426865819, guid: 7317ac3dc606f5c419e9a81b2156c33f, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7913498824286195854, guid: 7317ac3dc606f5c419e9a81b2156c33f, type: 3}
       propertyPath: m_RootOrder
@@ -2300,6 +2850,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7317ac3dc606f5c419e9a81b2156c33f, type: 3}
 --- !u!4 &3534630643206322855 stripped
 Transform:
@@ -2311,6 +2864,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 2103702876195321808}
     m_Modifications:
     - target: {fileID: 3748260470922013471, guid: a86700941998d83419a81fe06b94fc4e, type: 3}
@@ -2361,7 +2915,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pole_light
       objectReference: {fileID: 0}
+    - target: {fileID: 4872952173619508445, guid: a86700941998d83419a81fe06b94fc4e, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a86700941998d83419a81fe06b94fc4e, type: 3}
 --- !u!4 &7696487900948414266 stripped
 Transform:
@@ -2373,8 +2934,21 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 2150943961925873355}
     m_Modifications:
+    - target: {fileID: 2362560372462735108, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2438915277165007733, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4076582724436831561, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 5880005924203062904, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -2423,7 +2997,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Traffic_light (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6674853065384745470, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6780992711894575427, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092498463705685410, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8977522139522616478, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
 --- !u!4 &3525204240056717577 stripped
 Transform:
@@ -2435,6 +3028,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 3338646474366975274}
     m_Modifications:
     - target: {fileID: 3748260470922013471, guid: a86700941998d83419a81fe06b94fc4e, type: 3}
@@ -2485,7 +3079,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pole_light
       objectReference: {fileID: 0}
+    - target: {fileID: 4872952173619508445, guid: a86700941998d83419a81fe06b94fc4e, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a86700941998d83419a81fe06b94fc4e, type: 3}
 --- !u!4 &5881022338322371561 stripped
 Transform:
@@ -2497,11 +3098,16 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 462033188534436602}
     m_Modifications:
     - target: {fileID: 5390452360692660160, guid: 5621aa4915c640b4da9c0a273c74e932, type: 3}
       propertyPath: m_Name
       value: Trash_can_1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5390452360692660160, guid: 5621aa4915c640b4da9c0a273c74e932, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7207479824348937094, guid: 5621aa4915c640b4da9c0a273c74e932, type: 3}
       propertyPath: m_RootOrder
@@ -2548,6 +3154,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5621aa4915c640b4da9c0a273c74e932, type: 3}
 --- !u!4 &892919055975935714 stripped
 Transform:
@@ -2559,11 +3168,16 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 3260902427752143956}
     m_Modifications:
     - target: {fileID: 403382870701093472, guid: 687bed6654853fc48b16eb6a7e6d22de, type: 3}
       propertyPath: m_Name
       value: Pole_base
+      objectReference: {fileID: 0}
+    - target: {fileID: 403382870701093472, guid: 687bed6654853fc48b16eb6a7e6d22de, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2094389400582488211, guid: 687bed6654853fc48b16eb6a7e6d22de, type: 3}
       propertyPath: m_RootOrder
@@ -2610,6 +3224,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 687bed6654853fc48b16eb6a7e6d22de, type: 3}
 --- !u!4 &8345482638491256987 stripped
 Transform:
@@ -2621,11 +3238,16 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 462033188534436602}
     m_Modifications:
     - target: {fileID: 5390452360692660160, guid: 5621aa4915c640b4da9c0a273c74e932, type: 3}
       propertyPath: m_Name
       value: Trash_can_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5390452360692660160, guid: 5621aa4915c640b4da9c0a273c74e932, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7207479824348937094, guid: 5621aa4915c640b4da9c0a273c74e932, type: 3}
       propertyPath: m_RootOrder
@@ -2672,6 +3294,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5621aa4915c640b4da9c0a273c74e932, type: 3}
 --- !u!4 &844347675795335551 stripped
 Transform:
@@ -2683,11 +3308,16 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 909938602129579434}
     m_Modifications:
     - target: {fileID: 5546174547426865819, guid: 7317ac3dc606f5c419e9a81b2156c33f, type: 3}
       propertyPath: m_Name
       value: Pole_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5546174547426865819, guid: 7317ac3dc606f5c419e9a81b2156c33f, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7913498824286195854, guid: 7317ac3dc606f5c419e9a81b2156c33f, type: 3}
       propertyPath: m_RootOrder
@@ -2734,6 +3364,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7317ac3dc606f5c419e9a81b2156c33f, type: 3}
 --- !u!4 &1842590257854199985 stripped
 Transform:
@@ -2745,8 +3378,21 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 2103702876195321808}
     m_Modifications:
+    - target: {fileID: 2362560372462735108, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2438915277165007733, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4076582724436831561, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 5880005924203062904, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -2795,7 +3441,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Traffic_light (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6674853065384745470, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6780992711894575427, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092498463705685410, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8977522139522616478, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
 --- !u!4 &2834071442884601499 stripped
 Transform:
@@ -2807,8 +3472,21 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 909938602129579434}
     m_Modifications:
+    - target: {fileID: 2362560372462735108, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2438915277165007733, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4076582724436831561, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 5880005924203062904, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -2857,7 +3535,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Traffic_light (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6674853065384745470, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6780992711894575427, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092498463705685410, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8977522139522616478, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
 --- !u!4 &2788743716747544048 stripped
 Transform:
@@ -2869,11 +3566,16 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 2103702876195321808}
     m_Modifications:
     - target: {fileID: 403382870701093472, guid: 687bed6654853fc48b16eb6a7e6d22de, type: 3}
       propertyPath: m_Name
       value: Pole_base
+      objectReference: {fileID: 0}
+    - target: {fileID: 403382870701093472, guid: 687bed6654853fc48b16eb6a7e6d22de, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2094389400582488211, guid: 687bed6654853fc48b16eb6a7e6d22de, type: 3}
       propertyPath: m_RootOrder
@@ -2920,6 +3622,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 687bed6654853fc48b16eb6a7e6d22de, type: 3}
 --- !u!4 &7339332999258315807 stripped
 Transform:
@@ -2931,6 +3636,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 7077750064372430869}
     m_Modifications:
     - target: {fileID: 3748260470922013471, guid: a86700941998d83419a81fe06b94fc4e, type: 3}
@@ -2981,7 +3687,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pole_light
       objectReference: {fileID: 0}
+    - target: {fileID: 4872952173619508445, guid: a86700941998d83419a81fe06b94fc4e, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a86700941998d83419a81fe06b94fc4e, type: 3}
 --- !u!4 &5621418133832821532 stripped
 Transform:
@@ -2993,8 +3706,21 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 2672407223173879447}
     m_Modifications:
+    - target: {fileID: 2362560372462735108, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2438915277165007733, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4076582724436831561, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 5880005924203062904, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -3043,7 +3769,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Traffic_light
       objectReference: {fileID: 0}
+    - target: {fileID: 6674853065384745470, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6780992711894575427, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092498463705685410, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8977522139522616478, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 900f03829bb8941428e9260f447d5fba, type: 3}
 --- !u!4 &3083750044188165722 stripped
 Transform:
