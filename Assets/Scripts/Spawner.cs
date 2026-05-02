@@ -58,7 +58,8 @@ public class Spawner : MonoBehaviour, INetworkRunnerCallbacks
             Transform selectedSpawn = (player.PlayerId == 1) ? spawnPointA : spawnPointB;
 
             // assign state auth to owner of car
-            runner.Spawn(playerPrefab, selectedSpawn.position, selectedSpawn.rotation, player);
+            NetworkObject networkObject = runner.Spawn(playerPrefab, selectedSpawn.position, selectedSpawn.rotation, player);
+            networkObject.name = $"Car_{player.PlayerId}";
         }
     }
 

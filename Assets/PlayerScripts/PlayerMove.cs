@@ -2,16 +2,26 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Fusion;
+using Fusion.Sockets;
+using System.Collections.Generic;
+
+public struct NetworkInputData : INetworkInput
+{
+    public float steer;
+    public float gas;
+    public float brake;
+}
 
 [RequireComponent(typeof(Rigidbody))]
-public class PlayerMove : NetworkBehaviour
+public class PlayerMove : NetworkBehaviour, IBeforeUpdate, INetworkRunnerCallbacks
 {
+    [Header("Input References")]
     [Tooltip("Optional. Leave all three empty to use the Driving action map from a PlayerInput on a child object.")]
     public InputActionReference steerAction;
     public InputActionReference throttleAction;
     public InputActionReference brakeAction;
 
-    [Header("Movement")]
+    [Header("Movement Settings")]
     public float acceleration = 12f;
     public float brakePower = 16f;
     public float turnSpeed = 90f;
@@ -29,108 +39,96 @@ public class PlayerMove : NetworkBehaviour
 
     public override void Spawned()
     {
-        // init rigidbody on spawn
         _rb = GetComponent<Rigidbody>();
         
-        // camera follow only player
+        // register local instance
         if (HasInputAuthority)
         {
-            // TODO:
+            Runner.AddCallbacks(this);
         }
+    }
+
+    public override void Despawned(NetworkRunner runner, bool hasState)
+    {
+        // clean callbacks
+        runner.RemoveCallbacks(this);
     }
 
     private void Awake()
     {
         bool hasAllRefs = steerAction && throttleAction && brakeAction;
-        bool hasAnyRef = steerAction || throttleAction || brakeAction;
-        if (hasAnyRef && !hasAllRefs)
-        {
-            Debug.LogError("PlayerMove: assign all three InputActionReferences or leave all empty.", this);
-            enabled = false;
-            return;
-        }
-
         if (hasAllRefs)
         {
             _steer = steerAction.action;
             _gas = throttleAction.action;
             _brake = brakeAction.action;
             _ownsInputLifecycle = true;
-            return;
         }
-
-        PlayerInput playerInput = GetComponentInChildren<PlayerInput>();
-        if (!playerInput)
+        else
         {
-            Debug.LogWarning("PlayerMove: No Input source found.", this);
-            enabled = false;
-            return;
+            PlayerInput playerInput = GetComponentInChildren<PlayerInput>();
+            if (playerInput)
+            {
+                InputActionMap map = playerInput.actions.FindActionMap("Driving", false);
+                if (map != null)
+                {
+                    _steer = map.FindAction("Steer", false);
+                    _gas = map.FindAction("Gas", false);
+                    _brake = map.FindAction("Brake", false);
+                }
+            }
+            _ownsInputLifecycle = false;
         }
-
-        InputActionMap map = playerInput.actions.FindActionMap("Driving", throwIfNotFound: false);
-        if (map != null)
-        {
-            _steer = map.FindAction("Steer", throwIfNotFound: false);
-            _gas = map.FindAction("Gas", throwIfNotFound: false);
-            _brake = map.FindAction("Brake", throwIfNotFound: false);
-        }
-        _ownsInputLifecycle = false;
     }
 
-    private void OnEnable()
+    private void OnEnable() => ToggleActions(true);
+    private void OnDisable() => ToggleActions(false);
+
+    private void ToggleActions(bool enable)
     {
-        if (_ownsInputLifecycle)
-        {
-            _steer?.Enable();
-            _gas?.Enable();
-            _brake?.Enable();
-        }
+        if (!_ownsInputLifecycle) return;
+        if (enable) { _steer?.Enable(); _gas?.Enable(); _brake?.Enable(); }
+        else { _steer?.Disable(); _gas?.Disable(); _brake?.Disable(); }
     }
 
-    private void OnDisable()
+
+    public void OnInput(NetworkRunner runner, NetworkInput input)
     {
-        if (_ownsInputLifecycle)
-        {
-            _steer?.Disable();
-            _gas?.Disable();
-            _brake?.Disable();
-        }
+        var data = new NetworkInputData();
+
+        if (_steer != null) data.steer = _steer.ReadValue<float>();
+        if (_gas != null) data.gas = ReadPedal01(_gas);
+        if (_brake != null) data.brake = ReadPedal01(_brake);
+
+        input.Set(data);
     }
 
-    // fusion fun
+
     public override void FixedUpdateNetwork()
     {
-        //print("FixedUpdateNetwork: " + Runner.DeltaTime);
-        Debug.Log($"Object: {gameObject.name} | Input Auth: {Object.InputAuthority}");
-        // input auth check, only they can move
-        // if (!HasStateAuthority) return;
-        if (!HasStateAuthority) return;
-        if (_steer == null || _gas == null || _brake == null) return;
-        
-        // 1. read input
-        float steerInput = _steer.ReadValue<float>();
-        float gasInput = ReadPedal01(_gas);
-        float brakeInput = ReadPedal01(_brake);
+        if (GetInput(out NetworkInputData data))
+        {
+            ApplyMovement(data);
+        }
+    }
 
-        // TODO: delete debug once speed works properly
-        // Debug.Log($"Gas: {gasInput} | Speed: {currentSpeed}");
+    private void ApplyMovement(NetworkInputData data)
+    {
+        float combinedInput = data.gas - (data.brake * (brakePower / 16f));
 
-        float combinedInput = gasInput - brakeInput * (brakePower / 16f);
-
-        // 2. calc speed
+        // 1. calc network speed
         currentSpeed += combinedInput * acceleration * Runner.DeltaTime;
         currentSpeed = Mathf.MoveTowards(currentSpeed, 0f, drag * Runner.DeltaTime);
         currentSpeed = Mathf.Clamp(currentSpeed, -maxSpeed * 0.5f, maxSpeed);
 
-        Debug.Log($"Combined Input: {combinedInput} | Current Speed: {currentSpeed}");
-
-        // 1. calculate turn
-        float turnAmount = steerInput * turnSpeed * Mathf.Clamp01(Mathf.Abs(currentSpeed));
+        // 2. calc turning
+        float turnAmount = data.steer * turnSpeed * Mathf.Clamp01(Mathf.Abs(currentSpeed));
         _rb.angularVelocity = new Vector3(0, turnAmount, 0);
 
-        // 2. apply Velocity instead of MovePosition
+        // 3. apply velocity
         _rb.linearVelocity = transform.forward * currentSpeed;
     }
+
 
     private static float ReadPedal01(InputAction action)
     {
@@ -146,5 +144,100 @@ public class PlayerMove : NetworkBehaviour
     {
         float v = (raw + 1f) * 0.5f;
         return 1f - Mathf.Clamp01(v);
+    }
+
+    public void BeforeUpdate()
+    {
+        throw new NotImplementedException();
+    }
+
+    public void OnObjectExitAOI(NetworkRunner runner, NetworkObject obj, PlayerRef player)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void OnObjectEnterAOI(NetworkRunner runner, NetworkObject obj, PlayerRef player)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void OnPlayerJoined(NetworkRunner runner, PlayerRef player)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void OnPlayerLeft(NetworkRunner runner, PlayerRef player)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void OnShutdown(NetworkRunner runner, ShutdownReason shutdownReason)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void OnDisconnectedFromServer(NetworkRunner runner, NetDisconnectReason reason)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void OnConnectRequest(NetworkRunner runner, NetworkRunnerCallbackArgs.ConnectRequest request, byte[] token)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void OnConnectFailed(NetworkRunner runner, NetAddress remoteAddress, NetConnectFailedReason reason)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void OnUserSimulationMessage(NetworkRunner runner, SimulationMessagePtr message)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void OnReliableDataReceived(NetworkRunner runner, PlayerRef player, ReliableKey key, ArraySegment<byte> data)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void OnReliableDataProgress(NetworkRunner runner, PlayerRef player, ReliableKey key, float progress)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void OnInputMissing(NetworkRunner runner, PlayerRef player, NetworkInput input)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void OnConnectedToServer(NetworkRunner runner)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void OnSessionListUpdated(NetworkRunner runner, List<SessionInfo> sessionList)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void OnCustomAuthenticationResponse(NetworkRunner runner, Dictionary<string, object> data)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void OnHostMigration(NetworkRunner runner, HostMigrationToken hostMigrationToken)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void OnSceneLoadDone(NetworkRunner runner)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void OnSceneLoadStart(NetworkRunner runner)
+    {
+        throw new NotImplementedException();
     }
 }
