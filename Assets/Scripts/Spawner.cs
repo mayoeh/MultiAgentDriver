@@ -46,32 +46,21 @@ public class Spawner : MonoBehaviour, INetworkRunnerCallbacks
             SceneManager = sceneManager
         });
     }
-
+    
     public void OnPlayerJoined(NetworkRunner runner, PlayerRef player)
+{
+    // spawn own player (before p1 spawn for p2)
+    if (player == runner.LocalPlayer)
     {
-        if (runner.IsSharedModeMasterClient)
-        {
-            Debug.Log("Spawning car for player: " + player);
+        Debug.Log("Spawning my own car.");
 
-            // 1. set spawn a
-            Transform selectedSpawn = spawnPointA;
+        // use pid to spawn at a or b
+        Transform selectedSpawn = (player.PlayerId == 1) ? spawnPointA : spawnPointB;
 
-            // if more than 1 player, spawn at b
-            if (runner.ActivePlayers.Count() > 1)
-            {
-                selectedSpawn = spawnPointB != null ? spawnPointB : spawnPointA;
-            }
-
-            Vector3 pos = selectedSpawn.position;
-            Quaternion rot = selectedSpawn.rotation;
-
-            // 2. spawn player
-            NetworkObject playerObj = runner.Spawn(playerPrefab, pos, rot, player);
-            
-            // 3. tracks obj for despawn later
-            _spawnedCharacters.Add(player, playerObj);
-        }
+        // assign state auth to owner of car
+        runner.Spawn(playerPrefab, selectedSpawn.position, selectedSpawn.rotation, player);
     }
+}
 
     public void OnPlayerLeft(NetworkRunner runner, PlayerRef player)
     {

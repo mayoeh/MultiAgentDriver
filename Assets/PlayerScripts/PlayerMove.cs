@@ -101,9 +101,10 @@ public class PlayerMove : NetworkBehaviour
     public override void FixedUpdateNetwork()
     {
         //print("FixedUpdateNetwork: " + Runner.DeltaTime);
-
+        Debug.Log($"Object: {gameObject.name} | Input Auth: {Object.InputAuthority}");
         // input auth check, only they can move
-        if (!HasInputAuthority) return;
+        // if (!HasStateAuthority) return;
+        if (!HasStateAuthority) return;
         if (_steer == null || _gas == null || _brake == null) return;
         
         // 1. read input
@@ -112,7 +113,7 @@ public class PlayerMove : NetworkBehaviour
         float brakeInput = ReadPedal01(_brake);
 
         // TODO: delete debug once speed works properly
-        Debug.Log($"Gas: {gasInput} | Speed: {currentSpeed}");
+        // Debug.Log($"Gas: {gasInput} | Speed: {currentSpeed}");
 
         float combinedInput = gasInput - brakeInput * (brakePower / 16f);
 
