@@ -7,7 +7,8 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour, INetworkRunnerCallbacks
 {
-    public NetworkPrefabRef playerPrefab;
+    public NetworkPrefabRef player1Prefab;
+    public NetworkPrefabRef player2Prefab;
     private NetworkRunner _runner;
     public Transform spawnPointA;
     public Transform spawnPointB;
@@ -54,12 +55,21 @@ public class Spawner : MonoBehaviour, INetworkRunnerCallbacks
         {
             Debug.Log("Spawning my own car.");
 
-            // use pid to spawn at a or b
+            // 1. choose prefab for spawn
+            // pid 1 gets prefab 1, pid 2 gets prefab 2
+            NetworkPrefabRef selectedPrefab = (player.PlayerId == 1) ? player1Prefab : player2Prefab;
+
+            // 2. choose spawn point
             Transform selectedSpawn = (player.PlayerId == 1) ? spawnPointA : spawnPointB;
 
-            // assign state auth to owner of car
-            NetworkObject networkObject = runner.Spawn(playerPrefab, selectedSpawn.position, selectedSpawn.rotation, player);
-            networkObject.name = $"Car_{player.PlayerId}";
+            Debug.Log($"Spawning Car {player.PlayerId} using prefab {selectedPrefab}");
+
+            // 3. spawn selected prefabs
+            NetworkObject networkObject = runner.Spawn(selectedPrefab, selectedSpawn.position, selectedSpawn.rotation, player);
+            
+            // tracker for cleaning
+            _spawnedCharacters.Add(player, networkObject);
+            networkObject.name = $"Car_P{player.PlayerId}";
         }
     }
 

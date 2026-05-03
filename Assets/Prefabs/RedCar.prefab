@@ -1099,7 +1099,7 @@ GameObject:
   - component: {fileID: 6934459115274098364}
   - component: {fileID: 7990059351324800291}
   m_Layer: 0
-  m_Name: CarRoot
+  m_Name: RedCar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1134,7 +1134,7 @@ MonoBehaviour:
   m_Script: {fileID: -1552182283, guid: e725a070cec140c4caffb81624c8c787, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Fusion.Runtime.dll::Fusion.NetworkObject
-  SortKey: 2934458838
+  SortKey: 332813810
   ObjectInterest: 1
   Flags: 786433
   NestedObjects: []
@@ -1406,11 +1406,11 @@ PrefabInstance:
     - target: {fileID: -8793037913891490319, guid: 5cf9411810c013c40a16c502a8c90e03, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: d042ac9920b37b94bb1812cbcbc7983a, type: 2}
+      objectReference: {fileID: 2100000, guid: 93832c468ae931a42b7d994f8c639c73, type: 2}
     - target: {fileID: -5214303918297411637, guid: 5cf9411810c013c40a16c502a8c90e03, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: d042ac9920b37b94bb1812cbcbc7983a, type: 2}
+      objectReference: {fileID: 2100000, guid: 93832c468ae931a42b7d994f8c639c73, type: 2}
     - target: {fileID: -4530603160585418940, guid: 5cf9411810c013c40a16c502a8c90e03, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
@@ -1418,7 +1418,7 @@ PrefabInstance:
     - target: {fileID: -4530603160585418940, guid: 5cf9411810c013c40a16c502a8c90e03, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: d042ac9920b37b94bb1812cbcbc7983a, type: 2}
+      objectReference: {fileID: 2100000, guid: 93832c468ae931a42b7d994f8c639c73, type: 2}
     - target: {fileID: -4530603160585418940, guid: 5cf9411810c013c40a16c502a8c90e03, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
@@ -1466,14 +1466,22 @@ PrefabInstance:
     - target: {fileID: -2612708456206667114, guid: 5cf9411810c013c40a16c502a8c90e03, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: d042ac9920b37b94bb1812cbcbc7983a, type: 2}
+      objectReference: {fileID: 2100000, guid: 93832c468ae931a42b7d994f8c639c73, type: 2}
+    - target: {fileID: 1059756447804410148, guid: 5cf9411810c013c40a16c502a8c90e03, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2104022605422991255, guid: 5cf9411810c013c40a16c502a8c90e03, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: d042ac9920b37b94bb1812cbcbc7983a, type: 2}
+      objectReference: {fileID: 2100000, guid: 93832c468ae931a42b7d994f8c639c73, type: 2}
     - target: {fileID: 8771091787928289351, guid: 5cf9411810c013c40a16c502a8c90e03, type: 3}
       propertyPath: m_Name
       value: 2020 Koenigsegg Jesko
+      objectReference: {fileID: 0}
+    - target: {fileID: 8771091787928289351, guid: 5cf9411810c013c40a16c502a8c90e03, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8771091787928289351, guid: 5cf9411810c013c40a16c502a8c90e03, type: 3}
       propertyPath: m_TagString

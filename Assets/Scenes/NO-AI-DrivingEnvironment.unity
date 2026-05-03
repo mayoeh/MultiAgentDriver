@@ -1004,8 +1004,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0538da59cf7d11b4e9d66c54b1dd75c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spawner
-  playerPrefab:
-    RawGuidValue: 12b41690cf0e3564eb2aeb2d8c700f5d
+  player1Prefab:
+    RawGuidValue: 8e8187f662e03374fa4a9a376f0b42ae
+  player2Prefab:
+    RawGuidValue: e6c17d39f7de31745858fdc07abfaee9
   spawnPointA: {fileID: 225024385}
   spawnPointB: {fileID: 1811616472}
 --- !u!1001 &307762588
