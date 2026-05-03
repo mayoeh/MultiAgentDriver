@@ -16,7 +16,6 @@ public struct NetworkInputData : INetworkInput
 public class PlayerMove : NetworkBehaviour, IBeforeUpdate, INetworkRunnerCallbacks
 {
     [Header("Input References")]
-    [Tooltip("Optional. Leave all three empty to use the Driving action map from a PlayerInput on a child object.")]
     public InputActionReference steerAction;
     public InputActionReference throttleAction;
     public InputActionReference brakeAction;
@@ -40,17 +39,38 @@ public class PlayerMove : NetworkBehaviour, IBeforeUpdate, INetworkRunnerCallbac
     public override void Spawned()
     {
         _rb = GetComponent<Rigidbody>();
-        
-        // register local instance
+
+        // setup cameras
+        Camera internalCam = GetComponentInChildren<Camera>(true);
+        CarCameraRig rigScript = GetComponentInChildren<CarCameraRig>(true); 
+
         if (HasInputAuthority)
         {
+            // register for input updates
             Runner.AddCallbacks(this);
+
+            if (internalCam != null) 
+            {
+                internalCam.gameObject.SetActive(true);
+                internalCam.enabled = true;
+                internalCam.tag = "MainCamera";
+            }
+            if (rigScript != null) rigScript.enabled = true;
+        }
+        else
+        {
+            if (internalCam != null) 
+            {
+                internalCam.tag = "Untagged";
+                internalCam.enabled = false;
+                internalCam.gameObject.SetActive(false);
+            }
+            if (rigScript != null) rigScript.enabled = false;
         }
     }
 
     public override void Despawned(NetworkRunner runner, bool hasState)
     {
-        // clean callbacks
         runner.RemoveCallbacks(this);
     }
 
@@ -91,7 +111,6 @@ public class PlayerMove : NetworkBehaviour, IBeforeUpdate, INetworkRunnerCallbac
         else { _steer?.Disable(); _gas?.Disable(); _brake?.Disable(); }
     }
 
-
     public void OnInput(NetworkRunner runner, NetworkInput input)
     {
         var data = new NetworkInputData();
@@ -102,7 +121,6 @@ public class PlayerMove : NetworkBehaviour, IBeforeUpdate, INetworkRunnerCallbac
 
         input.Set(data);
     }
-
 
     public override void FixedUpdateNetwork()
     {
@@ -116,19 +134,14 @@ public class PlayerMove : NetworkBehaviour, IBeforeUpdate, INetworkRunnerCallbac
     {
         float combinedInput = data.gas - (data.brake * (brakePower / 16f));
 
-        // 1. calc network speed
         currentSpeed += combinedInput * acceleration * Runner.DeltaTime;
         currentSpeed = Mathf.MoveTowards(currentSpeed, 0f, drag * Runner.DeltaTime);
         currentSpeed = Mathf.Clamp(currentSpeed, -maxSpeed * 0.5f, maxSpeed);
 
-        // 2. calc turning
         float turnAmount = data.steer * turnSpeed * Mathf.Clamp01(Mathf.Abs(currentSpeed));
         _rb.angularVelocity = new Vector3(0, turnAmount, 0);
-
-        // 3. apply velocity
         _rb.linearVelocity = transform.forward * currentSpeed;
     }
-
 
     private static float ReadPedal01(InputAction action)
     {
@@ -136,7 +149,6 @@ public class PlayerMove : NetworkBehaviour, IBeforeUpdate, INetworkRunnerCallbac
         string path = action.activeControl?.path ?? string.Empty;
         if (path.IndexOf("trigger", StringComparison.OrdinalIgnoreCase) >= 0)
             return Mathf.Clamp01(raw);
-
         return NormalizeWheelPedal(raw);
     }
 
@@ -145,99 +157,25 @@ public class PlayerMove : NetworkBehaviour, IBeforeUpdate, INetworkRunnerCallbac
         float v = (raw + 1f) * 0.5f;
         return 1f - Mathf.Clamp01(v);
     }
+    
 
-    public void BeforeUpdate()
-    {
-        throw new NotImplementedException();
-    }
-
-    public void OnObjectExitAOI(NetworkRunner runner, NetworkObject obj, PlayerRef player)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void OnObjectEnterAOI(NetworkRunner runner, NetworkObject obj, PlayerRef player)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void OnPlayerJoined(NetworkRunner runner, PlayerRef player)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void OnPlayerLeft(NetworkRunner runner, PlayerRef player)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void OnShutdown(NetworkRunner runner, ShutdownReason shutdownReason)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void OnDisconnectedFromServer(NetworkRunner runner, NetDisconnectReason reason)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void OnConnectRequest(NetworkRunner runner, NetworkRunnerCallbackArgs.ConnectRequest request, byte[] token)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void OnConnectFailed(NetworkRunner runner, NetAddress remoteAddress, NetConnectFailedReason reason)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void OnUserSimulationMessage(NetworkRunner runner, SimulationMessagePtr message)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void OnReliableDataReceived(NetworkRunner runner, PlayerRef player, ReliableKey key, ArraySegment<byte> data)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void OnReliableDataProgress(NetworkRunner runner, PlayerRef player, ReliableKey key, float progress)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void OnInputMissing(NetworkRunner runner, PlayerRef player, NetworkInput input)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void OnConnectedToServer(NetworkRunner runner)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void OnSessionListUpdated(NetworkRunner runner, List<SessionInfo> sessionList)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void OnCustomAuthenticationResponse(NetworkRunner runner, Dictionary<string, object> data)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void OnHostMigration(NetworkRunner runner, HostMigrationToken hostMigrationToken)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void OnSceneLoadDone(NetworkRunner runner)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void OnSceneLoadStart(NetworkRunner runner)
-    {
-        throw new NotImplementedException();
-    }
+    public void BeforeUpdate() { }
+    public void OnObjectExitAOI(NetworkRunner runner, NetworkObject obj, PlayerRef player) { }
+    public void OnObjectEnterAOI(NetworkRunner runner, NetworkObject obj, PlayerRef player) { }
+    public void OnPlayerJoined(NetworkRunner runner, PlayerRef player) { }
+    public void OnPlayerLeft(NetworkRunner runner, PlayerRef player) { }
+    public void OnShutdown(NetworkRunner runner, ShutdownReason shutdownReason) { }
+    public void OnDisconnectedFromServer(NetworkRunner runner, NetDisconnectReason reason) { }
+    public void OnConnectRequest(NetworkRunner runner, NetworkRunnerCallbackArgs.ConnectRequest request, byte[] token) { }
+    public void OnConnectFailed(NetworkRunner runner, NetAddress remoteAddress, NetConnectFailedReason reason) { }
+    public void OnUserSimulationMessage(NetworkRunner runner, SimulationMessagePtr message) { }
+    public void OnReliableDataReceived(NetworkRunner runner, PlayerRef player, ReliableKey key, ArraySegment<byte> data) { }
+    public void OnReliableDataProgress(NetworkRunner runner, PlayerRef player, ReliableKey key, float progress) { }
+    public void OnInputMissing(NetworkRunner runner, PlayerRef player, NetworkInput input) { }
+    public void OnConnectedToServer(NetworkRunner runner) { }
+    public void OnSessionListUpdated(NetworkRunner runner, List<SessionInfo> sessionList) { }
+    public void OnCustomAuthenticationResponse(NetworkRunner runner, Dictionary<string, object> data) { }
+    public void OnHostMigration(NetworkRunner runner, HostMigrationToken hostMigrationToken) { }
+    public void OnSceneLoadDone(NetworkRunner runner) { }
+    public void OnSceneLoadStart(NetworkRunner runner) { }
 }
