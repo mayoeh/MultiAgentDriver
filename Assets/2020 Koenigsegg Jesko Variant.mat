@@ -22,13 +22,13 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: 2020 Koenigsegg Jesko Variant
   m_Shader: {fileID: -6465566751694194690, guid: 478ce3626be7a5f4ea58d6b13f05a2e4, type: 3}
-  m_Parent: {fileID: -6389374195127674075, guid: 5cf9411810c013c40a16c502a8c90e03, type: 3}
-  m_ModifiedSerializedProperties: 2
+  m_Parent: {fileID: 2100000, guid: 93832c468ae931a42b7d994f8c639c73, type: 2}
+  m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _VOLUME_TRANSMISSION_OFF
   m_InvalidKeywords:
   - _VERTEX_COLORS_ON
-  m_LightmapFlags: 6
+  m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -43,7 +43,7 @@ Material:
     m_Ints: []
     m_Floats: []
     m_Colors:
-    - baseColorFactor: {r: 0, g: 1, b: 1, a: 1}
+    - baseColorFactor: {r: 0, g: 0.37815166, b: 1, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &8340167463362209047
