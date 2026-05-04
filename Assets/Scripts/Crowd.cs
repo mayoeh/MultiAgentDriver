@@ -16,27 +16,37 @@ public class Crowd : MonoBehaviour
 
     void Update()
     {
-        if (target != null)
+        if (target == null) return;
+
+        if (!navMeshAgent.pathPending &&
+            navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance)
         {
-            if (Vector3.Distance(transform.position, target.transform.position) <= 0.5f)
-            {
-                FindTarget();
-            }
+            FindTarget();
         }
     }
 
     public void FindTarget()
     {
-        // Find all available targets
         AllTargets = GameObject.FindGameObjectsWithTag("Target");
 
-        if (AllTargets.Length == 0)
-            return;
+        if (AllTargets.Length == 0) return;
 
-        // Pick random target
-        target = AllTargets[Random.Range(0, AllTargets.Length)];
+        GameObject newTarget;
 
-        // Move agent
-        navMeshAgent.SetDestination(target.transform.position);
+        do
+        {
+            newTarget = AllTargets[Random.Range(0, AllTargets.Length)];
+        }
+        while (AllTargets.Length > 1 && newTarget == target);
+
+        target = newTarget;
+
+        NavMeshPath path = new NavMeshPath();
+        navMeshAgent.CalculatePath(target.transform.position, path);
+
+        if (path.status == NavMeshPathStatus.PathComplete)
+        {
+            navMeshAgent.SetDestination(target.transform.position);
+        }
     }
 }

@@ -234,8 +234,16 @@ public class CarAIController : MonoBehaviour
                 UnityEngine.Debug.DrawRay(checks[i].position, checks[i].forward * maxDistance, Color.green);
                 #endif
                 
-                if(isObjectInFront == true)
+                if (isObjectInFront)
+                {
                     objectInFront++;
+
+                    // UnityEngine.Debug.Log(
+                    //     $"Car '{gameObject.name}' detected object: '{carHit.collider.gameObject.name}' " +
+                    //     $"on layer '{LayerMask.LayerToName(carHit.collider.gameObject.layer)}' " +
+                    //     $"at distance {carHit.distance}"
+                    // );
+                }
             }
            
             if (objectInFront > 0)
