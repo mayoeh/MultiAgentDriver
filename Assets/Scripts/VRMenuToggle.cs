@@ -8,68 +8,132 @@ public class VRMenuToggle : MonoBehaviour
 
     public InputActionReference toggleMenuAction;
     public float distanceInFront = 2f;
+    private Transform originalParent;
 
-    void OnEnable()
-    {
-        toggleMenuAction.action.Enable();
-        toggleMenuAction.action.performed += OnToggleMenu;
-    }
+    private bool menuActive = false;
 
-    void OnDisable()
-    {
-        toggleMenuAction.action.performed -= OnToggleMenu;
-        toggleMenuAction.action.Disable();
-    }
+
+    // void OnEnable()
+    // {
+    //     toggleMenuAction.action.Enable();
+    //     toggleMenuAction.action.performed += OnToggleMenu;
+    // }
+
+    // void OnDisable()
+    // {
+    //     toggleMenuAction.action.performed -= OnToggleMenu;
+    //     toggleMenuAction.action.Disable();
+    // }
 
     void Start()
     {
         menuUI.SetActive(false);
+        originalParent = transform.parent;
+        gameObject.SetActive(false);
     }
 
-    private void OnToggleMenu(InputAction.CallbackContext context)
-    {
-        ToggleMenu();
-    }
+    // void Update()
+    // {
+    //     // Keep menu in front of player while active
+    //     if (menuActive)
+    //     {
+    //         PositionMenuInFront();
+    //     }
+    // }
 
-    public void ToggleMenu()
-    {
-        if (menuUI.activeSelf)
-        {
-            menuUI.SetActive(false);
-            return;
-        }
+    // private void OnToggleMenu(InputAction.CallbackContext context)
+    // {
+    //     ToggleMenu();
+    // }
 
-        ShowMenu();
-    }
+    // public void ToggleMenu()
+    // {
+    //     if (menuUI.activeSelf)
+    //     {
+    //         menuUI.SetActive(false);
+    //         return;
+    //     }
 
-    public void ShowMenu()
-    {
-        // Position in front of player
-        Vector3 spawnPos =
-            playerCamera.position +
-            playerCamera.forward * distanceInFront;
+    //     ShowMenu();
+    // }
 
-        spawnPos.y = playerCamera.position.y;
+    // public void ShowMenu()
+    // {
+    //     // Position in front of player
+    //     Vector3 spawnPos =
+    //         playerCamera.position +
+    //         playerCamera.forward * distanceInFront;
 
-        menuUI.transform.position = spawnPos;
+    //     spawnPos.y = playerCamera.position.y;
 
-        // FIXED: correct facing direction
-        Vector3 lookDir =
-            menuUI.transform.position - playerCamera.position;
+    //     menuUI.transform.position = spawnPos;
 
-        lookDir.y = 0;
+    //     // FIXED: correct facing direction
+    //     Vector3 lookDir =
+    //         menuUI.transform.position - playerCamera.position;
 
-        menuUI.transform.rotation =
-            Quaternion.LookRotation(lookDir);
+    //     lookDir.y = 0;
 
-        menuUI.SetActive(true);
-    }
+    //     menuUI.transform.rotation =
+    //         Quaternion.LookRotation(lookDir);
+
+    //     menuUI.SetActive(true);
+    // }
+
+    // void PositionMenuInFront()
+    // {
+    //     // Position menu in front of camera
+    //     transform.position = playerCamera.position + playerCamera.forward * distanceInFront;
+
+    //     // Face the player
+    //     transform.LookAt(playerCamera);
+
+    //     // Flip so front side faces player
+    //     transform.Rotate(0, 180, 0);
+    // }
+
+    // public void OpenMenuFromCollision()
+    // {
+    //     if (menuActive) return;
+
+    //     menuActive = true;
+    //     gameObject.SetActive(true);
+
+    //     PositionMenuInFront();
+    // }
+
+    // public void ResetMenu()
+    // {
+    //     menuActive = false;
+    //     gameObject.SetActive(false);
+    // }
 
     public void OpenMenuFromCollision()
     {
-        if (!menuUI.activeSelf)
-        {
-            ShowMenu();
-        }
+        if (menuActive) return;
+
+        menuActive = true;
+
+        // Parent to camera so it follows naturally
+        transform.SetParent(playerCamera);
+
+        // Position in front of camera
+        transform.localPosition = new Vector3(0, 0, distanceInFront);
+
+        // Face the player
+        transform.localRotation = Quaternion.identity;
+
+        gameObject.SetActive(true);
+    }
+
+    public void ResetMenu()
+    {
+        Debug.Log("Tried to click");
+        menuActive = false;
+
+        // Unparent if needed
+        transform.SetParent(originalParent);
+
+        gameObject.SetActive(false);
     }
 }
