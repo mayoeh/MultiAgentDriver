@@ -460,7 +460,7 @@ MonoBehaviour:
   requestRecordAudioPermissionOnStartup: 0
   requestPassthroughCameraAccessPermissionOnStartup: 0
   _localDimming: 1
-  _trackingOriginType: 1
+  _trackingOriginType: 0
   usePositionTracking: 1
   useRotationTracking: 1
   useIPDInPositionTracking: 1
@@ -1161,7 +1161,7 @@ MonoBehaviour:
   brakeAction: {fileID: 9167388973906992006, guid: b64b4ce3728bf4e489af09a58b35d6e2, type: 3}
   acceleration: 12
   brakePower: 16
-  turnSpeed: 90
+  turnSpeed: 20
   maxSpeed: 15
   drag: 2
 --- !u!114 &4582934348647117610
@@ -1179,7 +1179,7 @@ MonoBehaviour:
   steerAction: {fileID: -2411954924552901894, guid: b64b4ce3728bf4e489af09a58b35d6e2, type: 3}
   steeringWheel: {fileID: 5338855340572137859}
   steeringWheelAxis: {x: 0, y: -1, z: 0}
-  steeringWheelMaxDegrees: 60
+  steeringWheelMaxDegrees: 490
   invertSteeringWheel: 0
   steeringWheelSmoothing: 12
   frontLeftWheel: {fileID: 8944729648945282154}

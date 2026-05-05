@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.XR;
 using Fusion;
 
 public class DetermineCamera : NetworkBehaviour
@@ -8,15 +9,10 @@ public class DetermineCamera : NetworkBehaviour
 
     public override void Spawned()
     {
-        if (Runner.IsSharedModeMasterClient)
-        {
-            ovrCamera.SetActive(true);
-            Debug.Log("Master Client: Using OVR Camera");
-        }
-        else
-        {
-            normalCamera.SetActive(true);
-            Debug.Log("Client: Using Normal Camera");
-        }
+        bool isLocal = HasInputAuthority;
+        bool useVR = isLocal && XRSettings.isDeviceActive;
+
+        if (ovrCamera) ovrCamera.SetActive(isLocal && useVR);
+        if (normalCamera) normalCamera.SetActive(isLocal && !useVR);
     }
 }

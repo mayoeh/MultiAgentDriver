@@ -12,20 +12,20 @@ public class Spawner : MonoBehaviour, INetworkRunnerCallbacks
     private NetworkRunner _runner;
     public Transform spawnPointA;
     public Transform spawnPointB;
+    public string sessionName = "CarRaceRoom";
+    public bool autoStart = true;
     private Dictionary<PlayerRef, NetworkObject> _spawnedCharacters = new Dictionary<PlayerRef, NetworkObject>();
+
+    private void Start()
+    {
+        if (autoStart) StartGame(GameMode.Shared);
+    }
 
     private void OnGUI()
     {
-        if (_runner == null)
+        if (_runner == null && GUI.Button(new Rect(10, 10, 200, 40), "Join Session"))
         {
-            if (GUI.Button(new Rect(10, 10, 200, 40), "Host Session"))
-            {
-                StartGame(GameMode.Shared);
-            }
-            if (GUI.Button(new Rect(10, 60, 200, 40), "Join Session"))
-            {
-                StartGame(GameMode.Shared);
-            }
+            StartGame(GameMode.Shared);
         }
     }
 
@@ -43,7 +43,7 @@ public class Spawner : MonoBehaviour, INetworkRunnerCallbacks
         await _runner.StartGame(new StartGameArgs
         {
             GameMode = mode,
-            SessionName = "CarRaceRoom",
+            SessionName = sessionName,
             SceneManager = sceneManager
         });
     }
